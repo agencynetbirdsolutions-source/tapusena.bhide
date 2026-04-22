@@ -1,0 +1,379 @@
+/* styles.css - Complete CSS for Prince SCHOOL Website */
+
+/* Reset and Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+/* Enhanced Image Section CSS */
+.image-section {
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px;
+  position: relative;
+}
+
+.image-section a {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.image-section a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.image-section a:hover img {
+  transform: scale(1.02);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-link {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  animation: float 3s ease-in-out infinite;
+}
+
+.whatsapp-link img {
+  width: 70px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-link:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Footer Navigation */
+.footer {
+  text-align: center;
+  margin: 40px 0 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.footer a {
+  color: #2c3e50;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 500;
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.footer a:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  border-color: #667eea;
+}
+
+/* External Link Button */
+.external-link-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.external-link-section a {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+  transition: all 0.3s ease;
+  border: 2px solid #4CAF50;
+}
+
+.external-link-section a:hover {
+  background: white;
+  color: #4CAF50;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+}
+
+/* Disclaimer Section */
+.disclaimer {
+  background: linear-gradient(135deg, #f1f1f1 0%, #e8e8e8 100%);
+  text-align: center;
+  padding: 30px;
+  margin-top: 30px;
+  font-size: 14px;
+  border-top: 3px solid #667eea;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.disclaimer b {
+  color: #2c3e50;
+}
+
+/* Page Content Styles (for additional pages like privacy-policy, about-us, etc.) */
+.page-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.page-content h1 {
+  color: #2c3e50;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.page-content h2 {
+  color: #34495e;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.page-content p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.page-content ul, 
+.page-content ol {
+  margin: 20px 0;
+  padding-left: 30px;
+}
+
+.page-content li {
+  margin-bottom: 10px;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 30px;
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  border: 2px solid #667eea;
+}
+
+.back-button:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Contact Info Section */
+.contact-info {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 30px 0;
+  border-left: 4px solid #667eea;
+}
+
+.contact-info h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .page-content {
+    padding: 20px;
+    margin: 20px auto;
+  }
+  
+  .footer a {
+    display: block;
+    margin: 10px auto;
+    max-width: 250px;
+  }
+  
+  .image-section {
+    margin: 15px auto;
+    padding: 10px;
+  }
+  
+  .whatsapp-link {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .whatsapp-link img {
+    width: 60px;
+  }
+  
+  .external-link-section a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .disclaimer {
+    padding: 20px;
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px;
+  }
+  
+  .footer a {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  
+  .image-section {
+    margin: 10px auto;
+    padding: 5px;
+  }
+  
+  .disclaimer {
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  .back-button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .whatsapp-link,
+  .footer,
+  .external-link-section,
+  .back-button {
+    display: none;
+  }
+  
+  .page-content {
+    box-shadow: none;
+    padding: 20px;
+  }
+  
+  .disclaimer {
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Optional Animation Classes */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Focus States for Accessibility */
+a:focus,
+button:focus {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Selection Color */
+::selection {
+  background: #667eea;
+  color: white;
+}
+
+::-moz-selection {
+  background: #667eea;
+  color: white;
+}

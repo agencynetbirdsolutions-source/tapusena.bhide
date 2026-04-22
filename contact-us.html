@@ -1,0 +1,563 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Prince SCHOOL</title>
+    
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 992px) {
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Contact Cards */
+        .contact-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border-top: 5px solid #667eea;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-card h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-card h2 i {
+            color: #667eea;
+        }
+
+        /* Contact Info Items */
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: #eef2ff;
+            transform: translateX(5px);
+        }
+
+        .contact-item i {
+            color: #667eea;
+            font-size: 24px;
+            margin-right: 20px;
+            min-width: 30px;
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        .contact-item-content h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .contact-item-content p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .contact-item-content a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item-content a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        /* WhatsApp Special Card */
+        .whatsapp-card {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            grid-column: 1 / -1;
+        }
+
+        .whatsapp-card h2 {
+            color: white;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .whatsapp-card .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .whatsapp-card .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .whatsapp-card i {
+            color: white;
+        }
+
+        .whatsapp-card .contact-item-content h3,
+        .whatsapp-card .contact-item-content p,
+        .whatsapp-card .contact-item-content a {
+            color: white;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: #25D366;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Map Section */
+        .map-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-section h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        /* Timing Section */
+        .timing-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .timing-card h2 {
+            color: white;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .timing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .timing-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .timing-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .timing-item p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Security Notice */
+        .security-notice {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+
+        .security-notice h3 {
+            color: #856404;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .security-notice ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .security-notice li {
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .security-notice li:before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+        }
+
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .nav-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #667eea;
+        }
+
+        .nav-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .nav-btn.home {
+            background: #667eea;
+            color: white;
+        }
+
+        .nav-btn.home:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            color: white;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .contact-card {
+                padding: 25px;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .contact-item i {
+                margin-bottom: 10px;
+            }
+            
+            .nav-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            iframe {
+                height: 300px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-card, .map-section, .timing-card, .security-notice {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1><i class="fas fa-address-book"></i> Contact Prince SCHOOL</h1>
+            <p>Get in touch with us through our official channels. We're here to assist you with all your queries and provide the best support.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <!-- Palwas Road Campus -->
+            <div class="contact-card">
+                <h2><i class="fas fa-school"></i> Palwas Road Campus</h2>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-item-content">
+                        <h3>Address</h3>
+                        <p>Palwas Road, Sikar–332001<br>Rajasthan, India</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-item-content">
+                        <h3>Phone Numbers</h3>
+                        <p>
+                            <a href="tel:+919610692222">+91 9610-69-2222</a><br>
+                            <a href="tel:+919610632222">+91 9610-63-2222</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-item-content">
+                        <h3>Email Address</h3>
+                        <p><a href="mailto:Princeschoolsikar@gmail.com">Princeschoolsikar@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Piprali Road Campus -->
+            <div class="contact-card">
+                <h2><i class="fas fa-school"></i> Piprali Road Campus</h2>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-item-content">
+                        <h3>Address</h3>
+                        <p>Piprali Road, Sikar–332001<br>Rajasthan, India</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-item-content">
+                        <h3>Phone Number</h3>
+                        <p><a href="tel:+919610642222">+91 9610-64-2222</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-item-content">
+                        <h3>Email Address</h3>
+                        <p><a href="mailto:Princeschoolpipraliroad@gmail.com">Princeschoolpipraliroad@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+           
+
+        <!-- Map Section -->
+        <div class="map-section">
+            <h2><i class="fas fa-map-marked-alt"></i> Our Location</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3554.328418750766!2d75.13932677481921!3d27.02562715245417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4b5b8d5c5a5d%3A0x1e2f7e1b1d1d1d1d!2sSikar%2C%20Rajasthan%20332001!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p style="text-align: center; margin-top: 15px; color: #666; font-style: italic;">
+                <i class="fas fa-info-circle"></i> Map shows Sikar, Rajasthan location. Contact us for exact campus directions.
+            </p>
+        </div>
+
+        <!-- Timing Section -->
+        <div class="timing-card">
+            <h2><i class="fas fa-clock"></i> Office Hours & Working Days</h2>
+            <div class="timing-grid">
+                <div class="timing-item">
+                    <h3><i class="fas fa-calendar-day"></i> Working Days</h3>
+                    <p>Monday to Saturday</p>
+                </div>
+                
+                <div class="timing-item">
+                    <h3><i class="fas fa-sun"></i> Morning Hours</h3>
+                    <p>9:00 AM to 1:00 PM</p>
+                </div>
+                
+                <div class="timing-item">
+                    <h3><i class="fas fa-moon"></i> Evening Hours</h3>
+                    <p>2:00 PM to 6:00 PM</p>
+                </div>
+                
+                <div class="timing-item">
+                    <h3><i class="fas fa-calendar-times"></i> Holiday</h3>
+                    <p>Sunday & Public Holidays</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Notice -->
+        <div class="security-notice">
+            <h3><i class="fas fa-shield-alt"></i> Important Security Information</h3>
+            <ul>
+                <li>We only communicate through official numbers and emails listed above</li>
+                <li>Beware of fraudsters - we never ask for money on social media</li>
+                <li>Always verify the contact number before sharing information</li>
+                <li>Our representatives will never ask for passwords or OTPs</li>
+                <li>Report suspicious calls/emails to us immediately</li>
+            </ul>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-links">
+            
+            <a href="about-us" class="nav-btn">
+                <i class="fas fa-info-circle"></i> About Us
+            </a>
+            <a href="privacy-policy" class="nav-btn">
+                <i class="fas fa-lock"></i> Privacy Policy
+            </a>
+            <a href="terms-and-conditions" class="nav-btn">
+                <i class="fas fa-file-contract"></i> Terms & Conditions
+            </a>
+        </div>
+</body>
+</html>
